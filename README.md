@@ -15,7 +15,7 @@ For this project i used NodeJS,ExpressJS for the back-end , AngularJS for the fr
  * in NodeJS's command prompt run the server using this command : > node server.js
  * in the browser type this url : localhost:3000 to get access to the application
  
-#For the Back-End using node JS i worked with :
+#For Back-end using NodeJS i worked with :
  
  * body-parser
  * express
