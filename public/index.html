@@ -1,0 +1,80 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="assets/CSS/bootstrap.min.css"
+          integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+          crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="assets/CSS/bootstrap-theme.min.css"
+          integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+    <title> index </title>
+
+</head>
+<body>
+<div class="container" ng-controller="AppCtrl">
+    <div class="panel panel-primary">
+        <div class="panel-heading inline">
+
+            <div class="h3">School List </div>
+               <span class="pull-right" style="margin-top: -41px;">
+                      <button type="button" class="btn btn-default" ng-click="open(null)">Add school</button>
+
+
+               </span>
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped">
+
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Region</th>
+                    <th>Number of Students</th>
+                    <th>Number of Teachers</th>
+                    <th>Actions</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody class="">
+
+
+                <tr ng-repeat="school in schoolList">
+                    <td>{{school.name}}</td>
+                    <td>{{school.address}}</td>
+                    <td>{{school.phone}}</td>
+                    <td>{{school.region}}</td>
+                    <td>{{school.numberstudents}}</td>
+                    <td>{{school.numberteachers}}</td>
+                    <td>
+                        <button class="btn btn-danger" ng-click="remove(school)">Remove</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-warning" ng-click="edit(school)">Edit</button>
+                    </td>
+
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/ui-bootstrap-tpls-0.14.3.min.js"></script>
+
+    <script src="controllers/controller.js"></script>
+    <script src="controllers/services.js"></script>
+    <div>
+        <script type="text/ng-template" id="myModalContent.html">
+
+        </script>
+
+    </div>
+</div>
+</body>
+</html>
